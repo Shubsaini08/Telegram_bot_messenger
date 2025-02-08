@@ -23,16 +23,16 @@ FILES_TO_WATCH = [
     "/data/data/com.termux/files/home/keyhunt/KEYFOUNDKEYFOUND.txt",
     "/data/data/com.termux/files/home/balance.txt",
     "/data/data/com.termux/files/home/eth/ETHEREUMFOUND.txt",
-    "/data/data/com.termux/files/home/FOUNDCASA.txt"
-    "mnt/g/heart/prog/roto/found.txt"
-    "mnt/g/heart/prog/kang/shubkang.txt"
-    "mnt/g/heart/prog/shathecure/FOUND.txt"
-    "mnt/g/heart/prog/rsz/FOUND.txt"
-    "mnt/g/heart/prog/match/match.txt"
-    "G:\heart\bitcoin\rsz\found.txt"
-    "G:\heart\solana\match\match.txt"
-    "G:\heart\eth\kang\KANGETH.txt"
-    "KEYFOUNDKEYFOUND.txt"
+    "/data/data/com.termux/files/home/FOUNDCASA.txt",
+    "mnt/g/heart/prog/roto/found.txt",
+    "mnt/g/heart/prog/kang/shubkang.txt",
+    "mnt/g/heart/prog/shathecure/FOUND.txt",
+    "mnt/g/heart/prog/rsz/FOUND.txt",
+    "mnt/g/heart/prog/match/match.txt",
+    "G:/heart/bitcoin/rsz/found.txt",
+    "G:/heart/solana/match/match.txt",
+    "G:/heart/eth/kang/KANGETH.txt",
+    "KEYFOUNDKEYFOUND.txt",
     "path/to/your/file.txt"
 ]
 
@@ -192,6 +192,7 @@ if __name__ == "__main__":
         observer.schedule(event_handler, directory, recursive=False)
 
     observer.start()
+
     threading.Thread(target=handle_commands, daemon=True).start()
 
     try:
@@ -201,4 +202,3 @@ if __name__ == "__main__":
         observer.stop()
 
     observer.join()
-
