@@ -135,6 +135,8 @@ For questions or issues, create a GitHub issue or contact me on Telegram.
 > 
 > ALSO FOR TRADING WITH BOTS :: https://t.me/+ggaun3gLB900MGY0
 > 
+> ALSO FOR TRADING WITH SIGNALS :: https://t.me/ExaSignals
+> 
 > GITHUB LINK FOR MORRE :: https://github.com/Shubsaini08
 > 
 FOR DONATIONS : 
