@@ -20,20 +20,20 @@ GET_UPDATES_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/getUpdates"
 
 # Files to watch
 FILES_TO_WATCH = [
-    "/data/data/com.termux/files/home/keyhunt/KEYFOUNDKEYFOUND.txt",
-    "/data/data/com.termux/files/home/balance.txt",
-    "/data/data/com.termux/files/home/eth/ETHEREUMFOUND.txt",
-    "/data/data/com.termux/files/home/FOUNDCASA.txt",
-    "mnt/g/heart/prog/roto/found.txt",
-    "mnt/g/heart/prog/kang/shubkang.txt",
-    "mnt/g/heart/prog/shathecure/FOUND.txt",
-    "mnt/g/heart/prog/rsz/FOUND.txt",
-    "mnt/g/heart/prog/match/match.txt",
-    "G:/heart/bitcoin/rsz/found.txt",
-    "G:/heart/solana/match/match.txt",
-    "G:/heart/eth/kang/KANGETH.txt",
-    "KEYFOUNDKEYFOUND.txt",
-    "path/to/your/file.txt"
+        "/data/data/com.termux/files/home/keyhunt/KEYFOUNDKEYFOUND.txt",
+        "/data/data/com.termux/files/home/balance.txt",
+        "/data/data/com.termux/files/home/eth/ETHEREUMFOUND.txt",
+        "/data/data/com.termux/files/home/FOUNDCASA.txt",
+        "mnt/g/heart/prog/roto/found.txt",
+        "mnt/g/heart/prog/kang/shubkang.txt",
+        "mnt/g/heart/prog/shathecure/FOUND.txt",
+        "mnt/g/heart/prog/rsz/FOUND.txt",
+        "mnt/g/heart/prog/match/match.txt",
+        "G:/heart/bitcoin/rsz/found.txt",
+        "G:/heart/solana/match/match.txt",
+        "G:/heart/eth/kang/KANGETH.txt",
+        "KEYFOUNDKEYFOUND.txt",
+        "path/to/your/file.txt"
 ]
 
 FILES_TO_WATCH = [os.path.abspath(f) for f in FILES_TO_WATCH]
@@ -113,7 +113,7 @@ class FileEventHandler(FileSystemEventHandler):
                 file_data[abs_path]["size"] = new_size
                 file_data[abs_path]["created"] = time.ctime(os.path.getctime(abs_path))
                 
-                send_message(f"✅ STATUS:: FOUND : {os.path.basename(abs_path)} :: {new_size} bytes")
+                send_message(f"✅ STATUS: FOUND : {os.path.basename(abs_path)} || {new_size} bytes")
                 time.sleep(1)
                 send_file(abs_path)
 
@@ -135,7 +135,7 @@ def handle_commands():
                     if "message" in update:
                         text = update["message"].get("text", "").strip().lower()
                         if text == "/start":
-                            send_message("👋 HELLO MASTER, HOW YOU’RE???\n🚀🔥 LET'S FIND THE SHIT OUT OF THE WORLD!")
+                            send_message("👋 HELLO MASTER, HOW YOU’RE???\n🚀🔥 LET'S FIND THE SHIT OUT OF THE WORLD! I LNOW YOU CAN COOK THE WHOLE WORLD")
                         elif text == "/update":
                             send_message("🔄 Checking for file updates...")
                             check_files()
@@ -182,8 +182,7 @@ def send_all_file_contents():
 # MAIN FUNCTION TO START MONITORING
 # ================================
 if __name__ == "__main__":
-    send_message("👋 HELLO MASTER, HOW YOU’RE???\n🚀🔥 LET'S FIND THE SHIT OUT OF THE WORLD!")
-
+    send_message("👋 HELLO MASTER, HOW YOU’RE???\n🚀🔥 THE SERVER IS RUNNING WELL")
     event_handler = FileEventHandler()
     observer = Observer()
 
@@ -192,7 +191,6 @@ if __name__ == "__main__":
         observer.schedule(event_handler, directory, recursive=False)
 
     observer.start()
-
     threading.Thread(target=handle_commands, daemon=True).start()
 
     try:
@@ -202,3 +200,5 @@ if __name__ == "__main__":
         observer.stop()
 
     observer.join()
+
+                
