@@ -32,6 +32,7 @@ FILES_TO_WATCH = [
     "G:\heart\bitcoin\rsz\found.txt"
     "G:\heart\solana\match\match.txt"
     "G:\heart\eth\kang\KANGETH.txt"
+    "KEYFOUNDKEYFOUND.txt"
     "path/to/your/file.txt"
 ]
 
